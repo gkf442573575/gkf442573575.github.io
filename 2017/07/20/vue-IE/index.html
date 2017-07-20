@@ -18,11 +18,11 @@
     <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
     <title>
         
-        nodeJs 二进制文件转换｜gkf&#39;s blog
+        vue-cli脚手架搭建vue项目的在IE运行Promise polyfill错误解决方法｜gkf&#39;s blog
         
     </title>
 
-    <link rel="canonical" href="http://gkf442573575.github.io/2017/07/12/nodeJS_buffer/">
+    <link rel="canonical" href="http://gkf442573575.github.io/2017/07/20/vue-IE/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -128,13 +128,13 @@
 
 
 <img class="wechat-title-img"
-     src="http://osymttvxu.bkt.clouddn.com/timg.jpg">
+     src="http://osymttvxu.bkt.clouddn.com/vue.jpg">
 
 
 <style>
     
     header.intro-header {
-        background-image: url('http://osymttvxu.bkt.clouddn.com/timg.jpg?imageView2/1/w/1400/h/400/interlace/1/q/90')
+        background-image: url('http://osymttvxu.bkt.clouddn.com/vue.jpg?imageView2/1/w/1400/h/400/interlace/1/q/90')
     }
 
     
@@ -145,15 +145,18 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                 <div class="post-heading">
-                    <h1>nodeJs 二进制文件转换</h1>
+                    <h1>vue-cli脚手架搭建vue项目的在IE运行Promise polyfill错误解决方法</h1>
                     
                     <span class="meta">
                          作者 郭凯峰
                         <span>
-                          日期 2017-07-12
+                          日期 2017-07-20
                          </span>
                     </span>
                     <div class="tags text-center">
+                        
+                        <a class="tag" href="/tags/#vue"
+                           title="vue">vue</a>
                         
                     </div>
                 </div>
@@ -162,7 +165,7 @@
     </div>
     <div class="post-title-haojen">
         <span>
-            nodeJs 二进制文件转换
+            vue-cli脚手架搭建vue项目的在IE运行Promise polyfill错误解决方法
         </span>
     </div>
 </header>
@@ -173,19 +176,22 @@
         <div class="row">
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                <p>微信小程序在获取二维码图片用node返回字符串，转换成buffer然后转换成图片</p>
-<h2 id="加载依赖"><a href="#加载依赖" class="headerlink" title="加载依赖"></a>加载依赖</h2><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ npm install node-fetch</div></pre></td></tr></table></figure>
-<h2 id="代码逻辑"><a href="#代码逻辑" class="headerlink" title="代码逻辑"></a>代码逻辑</h2><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</div><div class="line"><span class="keyword">const</span> fetch = <span class="built_in">require</span>(<span class="string">'node-fetch'</span>);</div><div class="line"><span class="keyword">var</span> appid =  yourappID;</div><div class="line"><span class="keyword">var</span> secret = yourappSecret;</div><div class="line">fetch(<span class="string">"https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&amp;appid="</span>+appid+<span class="string">"&amp;secret="</span>+secret)</div><div class="line">.then(<span class="function"><span class="params">response</span> =&gt;</span> response.json())</div><div class="line">.then(<span class="function"><span class="params">json</span> =&gt;</span> json.access_token)</div><div class="line">.then(<span class="function"><span class="params">token</span> =&gt;</span> </div><div class="line">    fetch(<span class="string">`http://api.weixin.qq.com/wxa/getwxacodeunlimit?access_token=<span class="subst">$&#123;token&#125;</span>`</span>, &#123;</div><div class="line">        <span class="attr">method</span>: <span class="string">'POST'</span>,</div><div class="line">        <span class="attr">headers</span>: &#123;</div><div class="line">            <span class="string">'Content-Type'</span>: <span class="string">'application/json'</span></div><div class="line">        &#125;,</div><div class="line">        <span class="attr">body</span>: <span class="built_in">JSON</span>.stringify(&#123;</div><div class="line">            <span class="attr">scene</span>: <span class="string">'1'</span></div><div class="line">        &#125;)</div><div class="line">    &#125;))</div><div class="line">.then(<span class="function"><span class="params">response</span> =&gt;</span> response.buffer())</div><div class="line">.then(<span class="function">(<span class="params">buffer</span>) =&gt;</span> &#123;</div><div class="line">    fs.writeFile(<span class="string">"test.jpg"</span>, buffer,  <span class="string">"binary"</span>, (err)=&gt;&#123;</div><div class="line">        <span class="keyword">if</span>(err)&#123;</div><div class="line">            <span class="built_in">console</span>.log(<span class="string">"生成失败"</span>);</div><div class="line">        &#125;</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">"文件生成成功"</span>);</div><div class="line">    &#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+                <h3 id="vue项目使用vuex在IE上运行出现"><a href="#vue项目使用vuex在IE上运行出现" class="headerlink" title="vue项目使用vuex在IE上运行出现"></a>vue项目使用vuex在IE上运行出现</h3><h3 id="vuex-requires-a-Promise-polyfill-in-this-browser的错误"><a href="#vuex-requires-a-Promise-polyfill-in-this-browser的错误" class="headerlink" title="vuex requires a Promise polyfill in this browser的错误"></a>vuex requires a Promise polyfill in this browser的错误</h3><h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案:"></a>解决方案:</h3><p>引入babel-polyfill</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ npm install -save babel-polyfill</div></pre></td></tr></table></figure>
+<p>在vue项目的主入口文件 main.js 加入 </p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> <span class="string">"babel-polyfill"</span>;</div></pre></td></tr></table></figure>
+<p>就可以解决vuex的报错，项目在IE上可正常运行</p>
+<h3 id="babel官网还有其他解决方案：https-babeljs-io-docs-usage-polyfill"><a href="#babel官网还有其他解决方案：https-babeljs-io-docs-usage-polyfill" class="headerlink" title="babel官网还有其他解决方案：https://babeljs.io/docs/usage/polyfill/"></a>babel官网还有其他解决方案：<a href="https://babeljs.io/docs/usage/polyfill/" target="_blank" rel="external">https://babeljs.io/docs/usage/polyfill/</a></h3>
                 <hr>
                 
 
                 <ul class="pager">
                     
-                    <li class="previous">
-                        <a href="/2017/07/19/vue-router-login/" data-toggle="tooltip" data-placement="top"
-                           title="vue与vuex来验证登录">&larr; Previous Post</a>
-                    </li>
                     
+                    <li class="next">
+                        <a href="/2017/07/19/vue-router-login/" data-toggle="tooltip" data-placement="top"
+                           title="vue与vuex来验证登录">Next Post &rarr;</a>
+                    </li>
                     
                 </ul>
 
@@ -200,7 +206,7 @@
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#加载依赖"><span class="toc-text">加载依赖</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码逻辑"><span class="toc-text">代码逻辑</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#vue项目使用vuex在IE上运行出现"><span class="toc-text">vue项目使用vuex在IE上运行出现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vuex-requires-a-Promise-polyfill-in-this-browser的错误"><span class="toc-text">vuex requires a Promise polyfill in this browser的错误</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解决方案"><span class="toc-text">解决方案:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#babel官网还有其他解决方案：https-babeljs-io-docs-usage-polyfill"><span class="toc-text">babel官网还有其他解决方案：https://babeljs.io/docs/usage/polyfill/</span></a></li></ol>
                 </div>
             </div>
         </div>
@@ -221,6 +227,9 @@
                         <a href="/tags/">FEATURED TAGS</a>
                     </h5>
                     <div class="tags">
+                        
+                        <a class="tag" href="/tags/#vue"
+                           title="vue">vue</a>
                         
                     </div>
                 </section>
