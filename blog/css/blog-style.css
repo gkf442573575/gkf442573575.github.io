@@ -1104,17 +1104,14 @@ img::-moz-selection {
 
 .navbar-custom.is-fixed .brand-logo {
     border-radius: 3px;
-    background: black;
+    background: rgb(231, 135, 70);
     color: white;
-    padding-bottom: 3px;
-    padding: 5px;
-    margin-right: 5px;
-    padding-top: 1px;
+    padding: 3px 5px;
 }
 
 .navbar-custom.is-fixed .navbar-brand,
 .navbar-custom.is-fixed .navbar-right a {
-    color: black;
+    color: rgb(231, 135, 70);
 }
 
 .navbar-custom.is-fixed .navbar-toggle span {
