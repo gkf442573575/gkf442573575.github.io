@@ -18,11 +18,11 @@
     <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
     <title>
         
-        郭凯峰的博客
+        绕圆心的运动｜郭凯峰的博客
         
     </title>
 
-    <link rel="canonical" href="http://gkf442573575.github.io/blog/blog/archives/2019/08/">
+    <link rel="canonical" href="http://gkf442573575.github.io/blog/blog/2019/08/15/circle/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/blog/css/bootstrap.min.css">
@@ -43,7 +43,7 @@
 <!-- hack iOS CSS :active style -->
 <body ontouchstart="" class="animated fadeIn">
 <!-- Navigation -->
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "false" data-istags="false
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "true" data-istags="false
 " data-ishome = "false" >
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -123,130 +123,124 @@
 
 <!-- Main Content -->
 
+<!--only post-->
 
-<!-- Page Header -->
-<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 visible-xs-block visible-sm-block">
-    <div class="row">
-        <header class="intro-header">
-            <div class="container">
-                <div class="site-heading text-center">
-                    <div class="about-me">
-                        <!--移动端头部显示-->
-                        <img src="http://pwdkchy4a.bkt.clouddn.com/avatar.jpg"/>
-                        <h5><a href="/blog/about/">郭凯峰</a></h5>
-                        <p>风起时愿在云上</p>
+
+<img class="wechat-title-img"
+     src="http://pwdkchy4a.bkt.clouddn.com/javascript.png">
+
+
+<style>
+    
+    header.intro-header {
+        background-image: url('http://pwdkchy4a.bkt.clouddn.com/javascript.png?imageView2/1/w/1400/h/400/interlace/1/q/90')
+    }
+
+    
+</style>
+
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <div class="post-heading">
+                    <h1>绕圆心的运动</h1>
+                    
+                    <span class="meta">
+                         作者 郭凯峰
+                        <span>
+                          日期 2019-08-15
+                         </span>
+                    </span>
+                    <div class="tags text-center">
+                        
+                        <a class="tag" href="/blog/tags/#animation"
+                           title="animation">animation</a>
+                        
                     </div>
                 </div>
             </div>
-        </header>
+        </div>
     </div>
-</div>
-<!-- Main Content -->
-<div class="container custom-haojen-container">
-    <!-- Post Container -->
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-1 col-md-8 col-md-offset-1 col-sm-12 col-xs-12 post-container">
-            <!-- Main Content -->
-
-
-
-<div class="post-preview "
-     style="background-image: url('http://pwdkchy4a.bkt.clouddn.com/javascript.png')">
-    <a href="/blog/2019/08/15/circle/">
-        <h2 class="post-title">
+    <div class="post-title-haojen">
+        <span>
             绕圆心的运动
-        </h2>
-        <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2019-08-15
-        </p>
-        
-        <div class="post-content-preview">
-            <p>
-                制作一个绕圆的运动
-/*  obj : &#123;    initX 起始的x点，    initY 起始的y点    angle 起始角度，    endangle 结束角度  &#125;  dom对象*/function circleAni(obj, el) &#123;  let &#..
-            </p>
-        </div>
-    </a>
-
-</div>
-
-<hr>
-
-
-
-
-<!-- 翻页 pager -->
-
-<ul class="pager">
-    
-    
-</ul>
-
-
-        </div>
-        <!-- Sidebar Container -->
-        <div class="
-                col-lg-3 col-lg-offset-0
-                col-md-3 col-md-offset-0
-                col-sm-12
-                col-xs-12
-                sidebar-container
-            ">
-
-            <!-- About Me -->
-            <section class="visible-md visible-lg" style="padding: 0 18px">
-                <div class="short-about">
-                    <!--侧边栏头像-->
-                    
-                    <img src="http://pwdkchy4a.bkt.clouddn.com/avatar.jpg"/>
-                    
-                    <h5><a href="/blog/about/">郭凯峰</a></h5>
-                    
-                    <p>风起时愿在云上</p>
-                    
-                    <hr>
-                    <!-- SNS Link 社交 -->
-                    <ul class="list-inline">
-                        
-                        
-                        
-
-                        
-
-                        
-
-                        
-                        <li>
-                            <a target="_blank" href="https://github.com/gkf442573575">
-                                        <span class="fa-stack fa-lg">
-                                            <i class="fa fa-circle fa-stack-2x"></i>
-                                            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                                        </span>
-                            </a>
-                        </li>
-                        
-
-                        
-                    </ul>
-                </div>
-            </section>
-
-            <!-- Featured Tags  标签 -->
-            
-            <section>
-                <div class="tags">
-                    
-                    
-                    
-                </div>
-            </section>
-            
-
-            
-
-        </div>
+        </span>
     </div>
-</div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <!-- Post Container -->
+            <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
+                <p>制作一个绕圆的运动</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">  obj : &#123;</span></span><br><span class="line"><span class="comment">    initX 起始的x点，</span></span><br><span class="line"><span class="comment">    initY 起始的y点</span></span><br><span class="line"><span class="comment">    angle 起始角度，</span></span><br><span class="line"><span class="comment">    endangle 结束角度</span></span><br><span class="line"><span class="comment">  &#125;</span></span><br><span class="line"><span class="comment">  dom对象</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">circleAni</span>(<span class="params">obj, el</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> &#123; initX, initY, angle, endangle &#125; = obj;</span><br><span class="line">  <span class="keyword">const</span> aniid = setInterval(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    angle++; <span class="comment">//增加度数</span></span><br><span class="line">    <span class="keyword">let</span> currX = initX + r * <span class="built_in">Math</span>.sin((angle / <span class="number">180</span>) * <span class="built_in">Math</span>.PI) + <span class="string">'px'</span>;</span><br><span class="line">    <span class="keyword">let</span> currY = initY + (r - r * <span class="built_in">Math</span>.cos((angle / <span class="number">180</span>) * <span class="built_in">Math</span>.PI)) + <span class="string">'px'</span>;</span><br><span class="line">    el.style.transform = <span class="string">`translate(<span class="subst">$&#123;currX&#125;</span>,<span class="subst">$&#123;currY&#125;</span>)`</span>;</span><br><span class="line">    <span class="keyword">if</span> (angle === endangle) &#123;</span><br><span class="line">      clearInterval(aniid);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (angle === <span class="number">360</span>) &#123;</span><br><span class="line">      angle = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;, <span class="number">10</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+                <hr>
+                
+
+                <ul class="pager">
+                    
+                    
+                </ul>
+
+                
+
+                
+
+
+                <!--加入新的评论系统-->
+                
+
+                
+
+            </div>
+
+            <div class="hidden-xs col-sm-3 toc-col">
+                <div class="toc-wrap">
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5 class="text-center">
+                        <a href="/blog/tags/">FEATURED TAGS</a>
+                    </h5>
+                    <div class="tags">
+                        
+                        <a class="tag" href="/blog/tags/#animation"
+                           title="animation">animation</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+            </div>
+        </div>
+
+    </div>
+</article>
+
+
+
+
+
+
 
 <!-- Footer -->
 <!-- Footer -->
